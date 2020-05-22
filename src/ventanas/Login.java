@@ -32,13 +32,13 @@ public class Login extends javax.swing.JFrame {
         setTitle("Acceso al sistema");
         setLocationRelativeTo(null);
 
-        ImageIcon wallpaper = new ImageIcon("src/images/wallpaperPrincipal.jpg");
+        ImageIcon wallpaper = new ImageIcon("src/images/fondoazul.jpg");
         Icon icono = new ImageIcon(wallpaper.getImage().getScaledInstance(jLabel_Wallpaper.getWidth(),
                 jLabel_Wallpaper.getHeight(), Image.SCALE_DEFAULT));
         jLabel_Wallpaper.setIcon(icono);
         this.repaint();
 
-        ImageIcon wallapper_logo = new ImageIcon("src/images/DS.png");
+        ImageIcon wallapper_logo = new ImageIcon("src/images/admin3.png");
         Icon icono_logo = new ImageIcon(wallapper_logo.getImage().getScaledInstance(jLabel_Logo.getWidth(),
                 jLabel_Logo.getHeight(), Image.SCALE_DEFAULT));
         jLabel_Logo.setIcon(icono_logo);
@@ -47,7 +47,7 @@ public class Login extends javax.swing.JFrame {
 
     @Override
     public Image getIconImage() {
-        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("images/icon.png"));
+        Image retValue = Toolkit.getDefaultToolkit().getImage(ClassLoader.getSystemResource("images/admin2.png"));
         return retValue;
     }
 
@@ -60,32 +60,31 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel_Logo = new javax.swing.JLabel();
         txt_user = new javax.swing.JTextField();
         txt_password = new javax.swing.JPasswordField();
         jButton_Acceder = new javax.swing.JButton();
+        jLabel_Logo = new javax.swing.JLabel();
         jLabel_Wallpaper = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImage(getIconImage());
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        getContentPane().add(jLabel_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 10, 270, 270));
 
-        txt_user.setBackground(new java.awt.Color(153, 153, 255));
+        txt_user.setBackground(new java.awt.Color(204, 102, 0));
         txt_user.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txt_user.setForeground(new java.awt.Color(255, 255, 255));
         txt_user.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_user.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 330, 210, -1));
+        getContentPane().add(txt_user, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 280, 210, 40));
 
-        txt_password.setBackground(new java.awt.Color(153, 153, 255));
+        txt_password.setBackground(new java.awt.Color(204, 102, 0));
         txt_password.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         txt_password.setForeground(new java.awt.Color(255, 255, 255));
         txt_password.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         txt_password.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 370, 210, -1));
+        getContentPane().add(txt_password, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 330, 210, 40));
 
-        jButton_Acceder.setBackground(new java.awt.Color(153, 153, 255));
+        jButton_Acceder.setBackground(new java.awt.Color(204, 102, 0));
         jButton_Acceder.setFont(new java.awt.Font("Arial Narrow", 0, 18)); // NOI18N
         jButton_Acceder.setForeground(new java.awt.Color(255, 255, 255));
         jButton_Acceder.setText("Acceder");
@@ -95,7 +94,8 @@ public class Login extends javax.swing.JFrame {
                 jButton_AccederActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton_Acceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(95, 420, 210, 35));
+        getContentPane().add(jButton_Acceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 190, 30));
+        getContentPane().add(jLabel_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 0, 600, 550));
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 550));
 
         pack();
