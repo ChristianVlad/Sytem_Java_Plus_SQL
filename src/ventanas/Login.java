@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package ventanas;
 
 import java.awt.Image;
@@ -13,18 +8,13 @@ import java.sql.*;
 import clases.Conexion;
 import javax.swing.JOptionPane;
 
-/**
- *
- * @author Ernesto
- */
+
 public class Login extends javax.swing.JFrame {
 
     public static String user = ""; //Se declara así para enviar datos entre interfaces
     String pass = "";
 
-    /**
-     * Creates new form Login
-     */
+
     public Login() {
         initComponents();
         setSize(400, 550);
@@ -95,7 +85,7 @@ public class Login extends javax.swing.JFrame {
             }
         });
         getContentPane().add(jButton_Acceder, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 400, 190, 30));
-        getContentPane().add(jLabel_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-100, 0, 600, 550));
+        getContentPane().add(jLabel_Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 0, 600, 550));
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 400, 550));
 
         pack();
