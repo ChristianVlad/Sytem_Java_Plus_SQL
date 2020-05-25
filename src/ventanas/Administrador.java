@@ -34,13 +34,13 @@ public class Administrador extends javax.swing.JFrame {
         try {
             Connection cn = Conexion.conectar();
             PreparedStatement pst = cn.prepareStatement(
-                "select nombre_usuarios from usuarios where username = '"
+                "select nombre_usuario from usuarios where username = '"
                     + user + "'");
             
             ResultSet rs = pst.executeQuery();
             if(rs.next()){
                 nombre_usuario = rs.getString("nombre_usuario");
-                jLabel_NombreUsuario.setText("nombre_usuario");
+                jLabel_NombreUsuario.setText("Bienvenido " + nombre_usuario);
                 
             }
         } catch (Exception e) {
@@ -80,53 +80,57 @@ public class Administrador extends javax.swing.JFrame {
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jButton_RegistrarSoporte.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/support.png"))); // NOI18N
-        getContentPane().add(jButton_RegistrarSoporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 220, 120, 120));
+        getContentPane().add(jButton_RegistrarSoporte, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 220, 120, 120));
 
         jButton_RegistrarAdmin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/otro.png"))); // NOI18N
-        getContentPane().add(jButton_RegistrarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, 120, 120));
+        getContentPane().add(jButton_RegistrarAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 60, 120, 120));
 
         jButton_RegistrarTec.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/tec.png"))); // NOI18N
-        getContentPane().add(jButton_RegistrarTec, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 60, 120, 120));
+        getContentPane().add(jButton_RegistrarTec, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 60, 120, 120));
 
         jButton_RegistrarUsuario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/add.png"))); // NOI18N
-        getContentPane().add(jButton_RegistrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 220, 120, 120));
+        getContentPane().add(jButton_RegistrarUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 220, 120, 120));
 
         jButton_Credenciales.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/informationuser.png"))); // NOI18N
-        getContentPane().add(jButton_Credenciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 120, 120));
+        getContentPane().add(jButton_Credenciales, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 370, 120, 120));
 
         jButton_Estadisticas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/images/grafica.png"))); // NOI18N
-        getContentPane().add(jButton_Estadisticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 370, 120, 120));
+        getContentPane().add(jButton_Estadisticas, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 370, 120, 120));
 
         jLabel1.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(255, 255, 255));
         jLabel1.setText("Gestionar usuarios:");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 40, 130, -1));
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 40, 130, -1));
 
         jLabel2.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("Registrar Usuario:");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, -1, -1));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 200, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("Registrar tecnico:");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, -1, -1));
 
         jLabel4.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Registrar soporte:");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 200, -1, -1));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 200, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("Estadisiticas");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 350, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 350, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Credenciales");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 350, -1, -1));
-        getContentPane().add(jLabel_NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 10, 140, 20));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 350, -1, -1));
+
+        jLabel_NombreUsuario.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        jLabel_NombreUsuario.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel_NombreUsuario.setText("Bienvenido ");
+        getContentPane().add(jLabel_NombreUsuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 10, 400, 30));
 
         jLabel_Wallpaper.setForeground(new java.awt.Color(255, 255, 255));
         getContentPane().add(jLabel_Wallpaper, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 660, 530));
